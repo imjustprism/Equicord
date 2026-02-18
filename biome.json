@@ -61,9 +61,6 @@
                 "useConst": "error",
                 "useShorthandAssign": "error",
                 "noYodaExpression": "error"
-            },
-            "nursery": {
-                "useSpread": "info"
             }
         }
     },
