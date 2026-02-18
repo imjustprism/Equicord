@@ -1,0 +1,92 @@
+{
+    "$schema": "https://biomejs.dev/schemas/2.4.2/schema.json",
+    "vcs": {
+        "enabled": true,
+        "clientKind": "git",
+        "useIgnoreFile": true
+    },
+    "files": {
+        "includes": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.mts", "src/**/*.js", "src/**/*.mjs", "src/**/*.jsx"]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineWidth": 200
+    },
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "double",
+            "jsxQuoteStyle": "double",
+            "arrowParentheses": "asNeeded",
+            "semicolons": "always",
+            "bracketSpacing": true,
+            "trailingCommas": "all"
+        }
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "recommended": false,
+            "correctness": {
+                "noConstantCondition": "error",
+                "noPrecisionLoss": "error",
+                "noUnsafeOptionalChaining": "error",
+                "noUnusedImports": "error",
+                "useIsNan": "error",
+                "useValidForDirection": "error"
+            },
+            "suspicious": {
+                "noAsyncPromiseExecutor": "error",
+                "noDoubleEquals": {
+                    "level": "error",
+                    "options": {
+                        "ignoreNull": true
+                    }
+                },
+                "noDuplicateCase": "error",
+                "noDuplicateElseIf": "error",
+                "noFallthroughSwitchClause": "error",
+                "noIrregularWhitespace": "error",
+                "noMisleadingCharacterClass": "error",
+                "noPrototypeBuiltins": "error",
+                "noShadowRestrictedNames": "error"
+            },
+            "complexity": {
+                "noAdjacentSpacesInRegex": "error",
+                "noUselessTernary": "error",
+                "useLiteralKeys": "error"
+            },
+            "style": {
+                "useConst": "error",
+                "useShorthandAssign": "error",
+                "noYodaExpression": "error"
+            }
+        }
+    },
+    "assist": {
+        "enabled": true,
+        "actions": {
+            "source": {
+                "organizeImports": {
+                    "level": "on",
+                    "options": {
+                        "groups": [
+                            {
+                                "source": [":PACKAGE:"]
+                            },
+                            ":BLANK_LINE:",
+                            {
+                                "source": ["@*/**", "~*"]
+                            },
+                            ":BLANK_LINE:",
+                            {
+                                "source": [":PATH:"]
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
