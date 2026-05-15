@@ -5,12 +5,10 @@
  */
 
 import { Devs } from "@utils/constants";
-import { Logger } from "@utils/Logger";
-import { classes } from "@utils/misc";
 import definePlugin from "@utils/types";
 
 export default definePlugin({
-    name: 'TestAutofix',
-    description: 'Demo plugin to verify autofix CI works correctly.',
+    name: "TestAutofix",
+    description: "Demo plugin to verify autofix CI works correctly.",
     authors: [Devs.prism],
 });
